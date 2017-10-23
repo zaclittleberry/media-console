@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Posts</ion-title>
+    <ion-title>Remote</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,14 +11,94 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col col-sm-4>
-
+      <ion-col col-3>
+        <button ion-button clear (click)="receiverPowerStandby()">
+          Standby
+        </button>
       </ion-col>
-      <ion-col col-sm-4>
-
+      <ion-col class="label" col-6>
+        Power
       </ion-col>
-      <ion-col col-sm-4>
-
+      <ion-col col-3>
+        <button ion-button clear (click)="receiverPowerOn()">
+          On
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-3>
+        <button ion-button clear (click)="receiverInputDown()">
+          Down
+        </button>
+      </ion-col>
+      <ion-col class="label" col-6>
+        Inputs
+      </ion-col>
+      <ion-col col-3>
+        <button ion-button clear (click)="receiverInputUp()">
+          Up
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <horizontal-navigation></horizontal-navigation>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button icon-only clear (click)="receiverVolumeDownMore()">
+          <ion-icon name="remove"></ion-icon>
+        </button>
+        <button ion-button icon-only clear (click)="receiverVolumeDown()">
+          <ion-icon small name="remove"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col class="label" col-4>
+        Volume
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button icon-only clear (click)="receiverVolumeUp()">
+          <ion-icon small name="add"></ion-icon>
+        </button>
+        <button ion-button icon-only clear (click)="receiverVolumeUpMore()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-list>
+      <ion-list-header>
+        <ion-badge item-end color="secondary">{{volume}}</ion-badge>
+      </ion-list-header>
+      <ion-row>
+        <ion-col col-10>
+          <ion-item>
+            <ion-range [(ngModel)]="volume" max="200">
+              <ion-icon range-left name="volume-mute"></ion-icon>
+              <ion-icon range-right name="volume-up"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button clear (click)="receiverVolumeSet(volume)">
+            Go
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+    <ion-row>
+      <ion-col col-3>
+        <button ion-button icon-only clear (click)="receiverMutingOn()">
+          <ion-icon name="volume-off"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col class="label" col-6>
+        Muting
+      </ion-col>
+      <ion-col col-3>
+        <button ion-button icon-only clear (click)="receiverMutingOff()">
+          <ion-icon name="volume-up"></ion-icon>
+        </button>
       </ion-col>
     </ion-row>
   </ion-grid>

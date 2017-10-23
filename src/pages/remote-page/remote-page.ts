@@ -11,7 +11,8 @@ import { DataService } from '../../services/data.service';
 })
 export class RemotePage {
 
-  posts: any;
+  inputs: any;
+  volume: any;
 
   constructor(
     public navCtrl: NavController,
@@ -23,11 +24,113 @@ export class RemotePage {
   }
 
   getDefaults() {
-
+    this.receiverInputInputs();
+    this.volume = 40;
   }
 
   ngOnInit() {
-    this.getPosts();
+
+  }
+
+  /**
+  * /receiver/system-power
+  **/
+
+  receiverPowerStandby() {
+    console.log('works');
+    this.dataService.receiverPowerStandby().subscribe(response => {
+
+    });
+  }
+
+  receiverPowerOn() {
+    this.dataService.receiverPowerOn().subscribe(response => {
+
+    });
+  }
+
+  /**
+  * /receiver/audio-muting
+  **/
+
+  receiverMutingOff() {
+    this.dataService.receiverMutingOff().subscribe(response => {
+
+    });
+  }
+
+  receiverMutingOn() {
+    this.dataService.receiverMutingOn().subscribe(response => {
+
+    });
+  }
+
+  receiverMutingToggle() {
+    this.dataService.receiverMutingToggle().subscribe(response => {
+
+    });
+  }
+
+  /**
+  * /receiver/master-volume
+  **/
+
+  receiverVolumeUp() {
+    this.dataService.receiverVolumeUp().subscribe(response => {
+
+    });
+  }
+
+  receiverVolumeDown() {
+    this.dataService.receiverVolumeDown().subscribe(response => {
+
+    });
+  }
+
+  receiverVolumeUpMore() {
+    this.dataService.receiverVolumeUpMore().subscribe(response => {
+
+    });
+  }
+
+  receiverVolumeDownMore() {
+    this.dataService.receiverVolumeDownMore().subscribe(response => {
+
+    });
+  }
+
+  receiverVolumeSet(level) {
+    this.dataService.receiverVolumeSet(level).subscribe(response => {
+
+    });
+  }
+
+  /**
+  * /receiver/input-selector
+  **/
+
+  receiverInputUp() {
+    this.dataService.receiverInputUp().subscribe(response => {
+
+    });
+  }
+
+  receiverInputDown() {
+    this.dataService.receiverInputDown().subscribe(response => {
+
+    });
+  }
+
+  receiverInputInputs() {
+    this.dataService.receiverInputInputs().subscribe(response => {
+      this.inputs = response;
+    });
+  }
+
+  receiverInputSet(input) {
+    this.dataService.receiverInputSet(input).subscribe(response => {
+
+    });
   }
 
 }

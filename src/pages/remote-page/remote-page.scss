@@ -1,3 +1,13 @@
 remote-page {
-
+  .label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+  ion-col {
+    text-align: center;
+  }
+  ion-row {
+    border-bottom: 1px solid grey;
+  }
 }

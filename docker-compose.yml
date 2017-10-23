@@ -1,6 +1,11 @@
+networks:
+  media_console:
+    driver: "bridge"
 version: '2'
 services:
   ionic:
+    networks:
+      - "media_console"
     container_name: "media-console"
     build:
       context: .

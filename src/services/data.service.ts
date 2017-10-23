@@ -87,7 +87,7 @@ export class DataService {
   }
 
   receiverVolumeDownMore() {
-    return this.http.get(this.dataApiUrl + '/receiver/master-volume/down')
+    return this.http.get(this.dataApiUrl + '/receiver/master-volume/down-more')
       .map(res => res.json());
   }
 
