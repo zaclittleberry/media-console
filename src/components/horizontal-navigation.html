@@ -1,0 +1,13 @@
+<div class="horizontal-navigation">
+  <div class="horizontal-navigation__wrapper">
+    <div class="horizontal-navigation__container">
+      <nav class="horizontal-navigation__navigation" #scrollArea>
+        <span class="horizontal-navigation__link" *ngFor="let item of navItems;" (click)='navAction(item.name)'>
+          {{ item.label }}
+        </span>
+      </nav>
+    </div>
+    <ion-icon #scrollRight class="scrollindicator scrollindicator--right" name="arrow-dropright" (click)="scrollTowardsEnd()"></ion-icon>
+    <ion-icon #scrollLeft class="scrollindicator scrollindicator--left" name="arrow-dropleft" (click)="scrollTowardsStart()"></ion-icon>
+  </div>
+</div>
