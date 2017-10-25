@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewChecked } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'horizontal-navigation',
@@ -27,7 +27,6 @@ export class HorizontalNavigationComponent implements AfterViewChecked {
     this.receiverInputInputs();
 
     this.scrollArea.nativeElement.onscroll = (function() {
-      console.log("onscroll");
       this.checkScroll();
     }).bind(this);
   }

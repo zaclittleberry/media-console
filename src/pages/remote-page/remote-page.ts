@@ -99,7 +99,8 @@ export class RemotePage {
     });
   }
 
-  receiverVolumeSet(level) {
+  receiverVolumeSet() {
+    let level = this.volume;
     this.dataService.receiverVolumeSet(level).subscribe(response => {
 
     });

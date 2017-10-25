@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { RemotePage } from './remote-page';
-import { HorizontalNavigationComponent } from '../../components/horizontal-navigation';
+import { HorizontalNavigationComponent } from '../../components/horizontal-navigation/horizontal-navigation';
 
 @NgModule({
   declarations: [

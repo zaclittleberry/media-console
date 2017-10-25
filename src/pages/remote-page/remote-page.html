@@ -46,46 +46,20 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-4>
-        <button ion-button icon-only clear (click)="receiverVolumeDownMore()">
-          <ion-icon name="remove"></ion-icon>
-        </button>
-        <button ion-button icon-only clear (click)="receiverVolumeDown()">
-          <ion-icon small name="remove"></ion-icon>
-        </button>
-      </ion-col>
-      <ion-col class="label" col-4>
+      <ion-col class="label" col-12>
         Volume
       </ion-col>
-      <ion-col col-4>
-        <button ion-button icon-only clear (click)="receiverVolumeUp()">
-          <ion-icon small name="add"></ion-icon>
-        </button>
-        <button ion-button icon-only clear (click)="receiverVolumeUpMore()">
-          <ion-icon name="add"></ion-icon>
-        </button>
+      <ion-col col-12>
+        <ion-range class="volume-slider" [(ngModel)]="volume" max="200" (ionChange)="receiverVolumeSet()" pin="true" debounce="500">
+          <button ion-button range-left icon-only clear (click)="receiverVolumeDown()">
+            <ion-icon name="volume-mute"></ion-icon>
+          </button>
+          <button ion-button range-right icon-only clear (click)="receiverVolumeUp()">
+            <ion-icon name="volume-up"></ion-icon>
+          </button>
+        </ion-range>
       </ion-col>
     </ion-row>
-    <ion-list>
-      <ion-list-header>
-        <ion-badge item-end color="secondary">{{volume}}</ion-badge>
-      </ion-list-header>
-      <ion-row>
-        <ion-col col-10>
-          <ion-item>
-            <ion-range [(ngModel)]="volume" max="200">
-              <ion-icon range-left name="volume-mute"></ion-icon>
-              <ion-icon range-right name="volume-up"></ion-icon>
-            </ion-range>
-          </ion-item>
-        </ion-col>
-        <ion-col col-2>
-          <button ion-button clear (click)="receiverVolumeSet(volume)">
-            Go
-          </button>
-        </ion-col>
-      </ion-row>
-    </ion-list>
     <ion-row>
       <ion-col col-3>
         <button ion-button icon-only clear (click)="receiverMutingOn()">
