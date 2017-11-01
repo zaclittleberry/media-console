@@ -134,4 +134,62 @@ export class RemotePage {
     });
   }
 
+  /**
+  * /receiver/input-selector
+  **/
+
+  receiverArrowUp() {
+    this.dataService.receiverSetupUp().subscribe(response => {
+
+    });
+    this.dataService.receiverTuningUp().subscribe(response => {
+
+    });
+  }
+
+  receiverArrowDown() {
+    this.dataService.receiverSetupDown().subscribe(response => {
+
+    });
+    this.dataService.receiverTuningDown().subscribe(response => {
+
+    });
+  }
+
+  receiverSetupLeft() {
+    this.dataService.receiverSetupLeft().subscribe(response => {
+
+    });
+  }
+
+  receiverSetupRight() {
+    this.dataService.receiverSetupRight().subscribe(response => {
+
+    });
+  }
+
+  receiverSetupEnter() {
+    this.dataService.receiverSetupEnter().subscribe(response => {
+
+    });
+  }
+
+  receiverSetupExit() {
+    this.dataService.receiverSetupExit().subscribe(response => {
+
+    });
+  }
+
+  receiverSetupHome() {
+    this.dataService.receiverSetupHome().subscribe(response => {
+
+    });
+  }
+
+  receiverSetupQuick() {
+    this.dataService.receiverSetupQuick().subscribe(response => {
+
+    });
+  }
+
 }

@@ -130,6 +130,63 @@ export class DataService {
       .map(res => res.json());
   }
 
+  /**
+  * /receiver/setup-operation
+  **/
+
+  receiverSetupUp() {
+    return this.http.get(this.dataApiUrl + '/receiver/setup-operation/up')
+      .map(res => res.json());
+  }
+
+  receiverSetupDown() {
+    return this.http.get(this.dataApiUrl + '/receiver/setup-operation/down')
+      .map(res => res.json());
+  }
+
+  receiverSetupRight() {
+    return this.http.get(this.dataApiUrl + '/receiver/setup-operation/right')
+      .map(res => res.json());
+  }
+
+  receiverSetupLeft() {
+    return this.http.get(this.dataApiUrl + '/receiver/setup-operation/left')
+      .map(res => res.json());
+  }
+
+  receiverSetupEnter() {
+    return this.http.get(this.dataApiUrl + '/receiver/setup-operation/enter')
+      .map(res => res.json());
+  }
+
+  receiverSetupExit() {
+    return this.http.get(this.dataApiUrl + '/receiver/setup-operation/exit')
+      .map(res => res.json());
+  }
+
+  receiverSetupHome() {
+    return this.http.get(this.dataApiUrl + '/receiver/setup-operation/home')
+      .map(res => res.json());
+  }
+
+  receiverSetupQuick() {
+    return this.http.get(this.dataApiUrl + '/receiver/setup-operation/quick')
+      .map(res => res.json());
+  }
+
+  /**
+  * /receiver/tuning-command
+  **/
+
+  receiverTuningUp() {
+    return this.http.get(this.dataApiUrl + '/receiver/tuning-command/up')
+      .map(res => res.json());
+  }
+
+  receiverTuningDown() {
+    return this.http.get(this.dataApiUrl + '/receiver/tuning-command/down')
+      .map(res => res.json());
+  }
   //////////////////////////////////////////////////////////////////////////////
 
 }

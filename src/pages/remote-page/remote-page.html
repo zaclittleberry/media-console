@@ -75,6 +75,53 @@
         </button>
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button icon-only clear (click)="receiverSetupQuick()">
+          <ion-icon name="construct"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col class="label" col-4>
+        <button ion-button icon-only clear (click)="receiverArrowUp()">
+          <ion-icon name="arrow-dropup"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-4>
+        <!-- Placeholder for status -->
+      </ion-col>
+
+      <ion-col col-4>
+        <button ion-button icon-only clear (click)="receiverSetupLeft()">
+          <ion-icon name="arrow-dropleft"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col class="label" col-4>
+        <button ion-button clear (click)="receiverSetupEnter()">
+          Enter
+        </button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button icon-only clear (click)="receiverSetupRight()">
+          <ion-icon name="arrow-dropright"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col col-4>
+        <button ion-button icon-only clear (click)="receiverSetupHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col class="label" col-4>
+        <button ion-button icon-only clear (click)="receiverArrowDown()">
+          <ion-icon name="arrow-dropdown"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button icon-only clear (click)="receiverSetupExit()">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 
 </ion-content>
